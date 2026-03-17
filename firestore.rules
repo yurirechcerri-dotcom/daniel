@@ -1,0 +1,72 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: leads
+    // Document ID: auto-generated
+    // Fields:
+    //   - nome: string (required, 1-100 chars)
+    //   - email: string (required, valid email format)
+    //   - telefone: string (required, 1-20 chars)
+    //   - profissao: string (required, 1-100 chars)
+    //   - createdAt: timestamp (required)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+          (request.auth.token.email == "yurirechcerri@gmail.com" && request.auth.token.email_verified == true));
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function isValidLead(data) {
+      return data.keys().hasAll(['nome', 'email', 'telefone', 'profissao', 'createdAt']) &&
+             data.keys().hasOnly(['nome', 'email', 'telefone', 'profissao', 'createdAt']) &&
+             data.nome is string && data.nome.size() >= 1 && data.nome.size() <= 100 &&
+             isValidEmail(data.email) &&
+             data.telefone is string && data.telefone.size() >= 1 && data.telefone.size() <= 20 &&
+             data.profissao is string && data.profissao.size() >= 1 && data.profissao.size() <= 100 &&
+             data.createdAt is timestamp;
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /leads/{leadId} {
+      // Public can create leads
+      allow create: if isValidLead(request.resource.data);
+      
+      // Only admins can read, update or delete leads
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /leads_presencial/{leadId} {
+      // Public can create leads
+      allow create: if isValidLead(request.resource.data);
+      
+      // Only admins can read, update or delete leads
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      allow create, update: if isAdmin();
+    }
+  }
+}
