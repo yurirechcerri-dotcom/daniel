@@ -378,11 +378,11 @@ export default function ConsultoriaPresencial({ onBack, onSuccess }: Consultoria
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2 rounded-3xl overflow-hidden border border-white/5 bg-neutral-900/50 p-2">
                 <div className="relative aspect-[3/4]">
-                  <img src="/antes1.jpg" alt="Antes 1" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/bj8q91b9/antes1.jpg" alt="Antes 1" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Antes</div>
                 </div>
                 <div className="relative aspect-[3/4]">
-                  <img src="/depois1.jpg" alt="Depois 1" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/S4Zn45P0/depois1.jpg" alt="Depois 1" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-gold/80 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Depois</div>
                 </div>
               </div>
@@ -391,11 +391,11 @@ export default function ConsultoriaPresencial({ onBack, onSuccess }: Consultoria
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2 rounded-3xl overflow-hidden border border-white/5 bg-neutral-900/50 p-2">
                 <div className="relative aspect-[3/4]">
-                  <img src="/antes2.jpg" alt="Antes 2" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/jPMSFtLQ/antes2.jpg" alt="Antes 2" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Antes</div>
                 </div>
                 <div className="relative aspect-[3/4]">
-                  <img src="/depois2.jpg" alt="Depois 2" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/WppD1j1h/depois2.jpg" alt="Depois 2" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-gold/80 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Depois</div>
                 </div>
               </div>
@@ -405,7 +405,7 @@ export default function ConsultoriaPresencial({ onBack, onSuccess }: Consultoria
           {/* Single Photo */}
           <div className="max-w-2xl mx-auto mb-24">
             <div className="rounded-[2.5rem] overflow-hidden border border-gold-dark/20 shadow-2xl">
-              <img src="/mudoucpfdnv.jpg" alt="Resultado Completo" className="w-full h-auto" />
+              <img src="https://i.ibb.co/Y484vkt7/mudoucpfdnv.jpg" alt="Resultado Completo" className="w-full h-auto" />
             </div>
             <p className="mt-6 text-gold-light text-sm font-serif italic">Impacto visual que gera autoridade instantânea</p>
           </div>
@@ -413,50 +413,23 @@ export default function ConsultoriaPresencial({ onBack, onSuccess }: Consultoria
           {/* Videos Grid */}
           <div className="flex flex-wrap justify-center gap-8">
             {[
-              { src: '/sim22.mp4', title: 'Transformação Real', startTime: '0.001' },
-              { src: '/feedback3.mp4', title: 'Depoimento Estratégico', startTime: '0.001' },
-              { src: '/mudoucpf.mp4', title: 'A Experiência do Cliente', startTime: '1.0' }
+              { id: 'ckzag0h05g', title: 'Transformação Real' },
+              { id: 'ln1gge9em1', title: 'Depoimento Estratégico' },
+              { id: '5znuistuim', title: 'A Experiência do Cliente' }
             ].map((video, i) => {
-              const [isPlaying, setIsPlaying] = useState(false);
-              const vRef = useRef<HTMLVideoElement>(null);
-
-              const handleVideoClick = () => {
-                if (vRef.current) {
-                  if (isPlaying) {
-                    vRef.current.pause();
-                  } else {
-                    vRef.current.play();
-                  }
-                  setIsPlaying(!isPlaying);
-                }
-              };
-
               return (
                 <div 
                   key={i} 
-                  className="group relative w-full max-w-[300px] aspect-[9/16] bg-neutral-900 rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl cursor-pointer"
-                  onClick={handleVideoClick}
+                  className="group relative w-full max-w-[300px] aspect-[9/16] bg-neutral-900 rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
                 >
-                  <video 
-                    ref={vRef}
-                    src={`${video.src}#t=${video.startTime}`} 
-                    className={`w-full h-full object-cover transition-opacity duration-500 ${isPlaying ? 'opacity-100' : 'opacity-60 group-hover:opacity-80'}`}
-                    playsInline
-                    preload="metadata"
-                  />
-                  
-                  {!isPlaying && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
-                        <Play className="w-6 h-6 text-white fill-current ml-1" />
-                      </div>
-                    </div>
-                  )}
-
-                  <div className={`absolute bottom-8 left-8 right-8 text-left transition-opacity duration-300 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
-                    <p className="text-gold-light text-[9px] uppercase tracking-[0.3em] font-bold mb-2">Vídeo Feedback</p>
-                    <h4 className="text-lg font-serif">{video.title}</h4>
-                  </div>
+                  <iframe 
+                    src={`https://fast.wistia.net/embed/iframe/${video.id}?videoFoam=true`}
+                    title={video.title}
+                    allow="autoplay; fullscreen"
+                    frameBorder="0"
+                    scrolling="no"
+                    className="w-full h-full"
+                  ></iframe>
                 </div>
               );
             })}
@@ -559,45 +532,16 @@ export default function ConsultoriaPresencial({ onBack, onSuccess }: Consultoria
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border border-white/10 group cursor-pointer"
-              onClick={toggleMute}
+              className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border border-white/10"
             >
-              <video 
-                ref={videoRef}
-                src="/conheca.mp4" 
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div 
-                  initial={false}
-                  animate={{ 
-                    scale: isMuted ? 1 : 0.8,
-                    opacity: isMuted ? 1 : 0
-                  }}
-                  className="bg-black/40 backdrop-blur-md p-8 rounded-full border border-white/20 flex flex-col items-center gap-3 transition-all group-hover:bg-black/60"
-                >
-                  {isMuted ? (
-                    <>
-                      <VolumeX className="w-12 h-12 text-white" />
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Clique para ativar o som</span>
-                    </>
-                  ) : (
-                    <Volume2 className="w-12 h-12 text-white" />
-                  )}
-                </motion.div>
-              </div>
-
-              {!isMuted && (
-                <div className="absolute bottom-6 right-6 p-3 bg-black/40 backdrop-blur-md rounded-full border border-white/10">
-                  <Volume2 className="w-4 h-4 text-white" />
-                </div>
-              )}
+              <iframe 
+                src="https://fast.wistia.net/embed/iframe/57ynzjv8pr?videoFoam=true"
+                title="Conheça Daniel Henrique"
+                allow="autoplay; fullscreen"
+                frameBorder="0"
+                scrolling="no"
+                className="w-full h-full"
+              ></iframe>
             </motion.div>
           </div>
         </section>

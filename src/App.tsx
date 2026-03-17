@@ -89,7 +89,7 @@ export default function App() {
                 <div className="absolute inset-0 bg-gold-dark/20 blur-[120px] rounded-full scale-110"></div>
                 <div className="relative">
                   <img 
-                    src="/perfil.png" 
+                    src="https://i.ibb.co/PZnPY4pC/perfil.png" 
                     alt="Daniel Henrique" 
                     className="relative w-64 h-auto md:w-80 md:h-auto object-contain drop-shadow-[0_20px_50px_rgba(184,134,11,0.2)]"
                     style={{ 
@@ -179,7 +179,7 @@ export default function App() {
                   </div>
                   <div className="w-full md:w-1/2 h-64 md:h-auto relative">
                     <img 
-                      src="/online.jpg" 
+                      src="https://i.ibb.co/PZhCGGwx/online.jpg" 
                       alt="Consultoria Online" 
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
                       referrerPolicy="no-referrer"
@@ -216,7 +216,7 @@ export default function App() {
                   </div>
                   <div className="w-full md:w-1/2 h-64 md:h-auto relative">
                     <img 
-                      src="/presencial.jpg" 
+                      src="https://i.ibb.co/7ttDDvGs/presencial.jpg" 
                       alt="Consultoria Presencial" 
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
                       referrerPolicy="no-referrer"

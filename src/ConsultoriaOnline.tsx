@@ -203,7 +203,7 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
           >
             <div className="absolute inset-0 bg-gold-dark/20 blur-[100px] rounded-full"></div>
             <img 
-              src="/online2.png" 
+              src="https://i.ibb.co/tTxhJn01/online2.png" 
               alt="Daniel Henrique" 
               className="relative w-full h-auto object-contain drop-shadow-2xl"
               style={{ 
@@ -216,20 +216,10 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
 
         {/* VSL Section */}
         <section className="max-w-5xl mx-auto px-6 mb-32">
-          <div className="relative aspect-video rounded-3xl overflow-hidden border-8 border-gold-dark/30 shadow-2xl group cursor-pointer">
-            <img 
-              src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop" 
-              alt="VSL Placeholder" 
-              className="w-full h-full object-cover grayscale brightness-50"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 bg-gold rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
-                <Play className="w-10 h-10 text-white fill-current ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-8 left-8 right-8 text-center">
-              <p className="text-gold-light text-xs uppercase tracking-[0.4em] font-bold mb-2">Assista ao vídeo</p>
-              <h2 className="text-2xl font-serif italic">Entenda como funciona o método</h2>
+          <div className="relative aspect-video rounded-3xl overflow-hidden border-8 border-gold-dark/30 shadow-2xl bg-neutral-900 flex items-center justify-center">
+            <div className="text-center">
+              <Play className="w-16 h-16 text-gold-light/20 mx-auto mb-4" />
+              <p className="text-gold-light/40 font-serif italic">Vídeo em breve</p>
             </div>
           </div>
         </section>
@@ -295,9 +285,9 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { step: 'Passo 1', title: 'Pré-análise visual', desc: 'Onde mergulhamos em quem você é, seus objetivos e o que deseja comunicar.', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop' },
-              { step: 'Passo 2', title: 'Encontro online', desc: 'Analisamos tecnicamente os traços do seu rosto e como eles se conectam com sua personalidade.', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop' },
-              { step: 'Passo 3', title: 'Alinhamento de imagem', desc: 'Criamos um dossiê prático e personalizado com as direções exatas para seu cabelo, barba, óculos e estilo.', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop' },
+              { step: 'Passo 1', title: 'Pré-análise visual', desc: 'Onde mergulhamos em quem você é, seus objetivos e o que deseja comunicar.', img: 'https://i.ibb.co/PZnPY4pC/perfil.png' },
+              { step: 'Passo 2', title: 'Encontro online', desc: 'Analisamos tecnicamente os traços do seu rosto e como eles se conectam com sua personalidade.', img: 'https://i.ibb.co/PZhCGGwx/online.jpg' },
+              { step: 'Passo 3', title: 'Alinhamento de imagem', desc: 'Criamos um dossiê prático e personalizado com as direções exatas para seu cabelo, barba, óculos e estilo.', img: 'https://i.ibb.co/S4Zn45P0/depois1.jpg' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-neutral-900/40">
                 <div className="h-80 relative overflow-hidden">
@@ -368,11 +358,11 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2 rounded-3xl overflow-hidden border border-white/5 bg-neutral-900/50 p-2">
                 <div className="relative aspect-[3/4]">
-                  <img src="/antes1.jpg" alt="Antes 1" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/bj8q91b9/antes1.jpg" alt="Antes 1" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Antes</div>
                 </div>
                 <div className="relative aspect-[3/4]">
-                  <img src="/depois1.jpg" alt="Depois 1" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/S4Zn45P0/depois1.jpg" alt="Depois 1" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-gold/80 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Depois</div>
                 </div>
               </div>
@@ -383,11 +373,11 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2 rounded-3xl overflow-hidden border border-white/5 bg-neutral-900/50 p-2">
                 <div className="relative aspect-[3/4]">
-                  <img src="/antes2.jpg" alt="Antes 2" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/jPMSFtLQ/antes2.jpg" alt="Antes 2" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Antes</div>
                 </div>
                 <div className="relative aspect-[3/4]">
-                  <img src="/depois2.jpg" alt="Depois 2" className="w-full h-full object-cover rounded-2xl" />
+                  <img src="https://i.ibb.co/WppD1j1h/depois2.jpg" alt="Depois 2" className="w-full h-full object-cover rounded-2xl" />
                   <div className="absolute top-4 left-4 px-3 py-1 bg-gold/80 backdrop-blur-md rounded-full text-[8px] font-bold uppercase tracking-widest">Depois</div>
                 </div>
               </div>
@@ -398,7 +388,7 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
           {/* Single Photo - Full Width or Centered */}
           <div className="max-w-2xl mx-auto mb-24">
             <div className="rounded-[2.5rem] overflow-hidden border border-gold-dark/20 shadow-2xl shadow-gold-dark/5">
-              <img src="/mudoucpfdnv.jpg" alt="Resultado Completo" className="w-full h-auto" />
+              <img src="https://i.ibb.co/Y484vkt7/mudoucpfdnv.jpg" alt="Resultado Completo" className="w-full h-auto" />
             </div>
             <p className="mt-6 text-gold-light text-sm font-serif italic">Impacto visual que gera autoridade instantânea</p>
           </div>
@@ -406,50 +396,22 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
           {/* Videos Grid */}
           <div className="flex flex-wrap justify-center gap-8">
             {[
-              { src: '/feedback3.mp4', title: 'Depoimento Estratégico', startTime: '0.001' },
-              { src: '/mudoucpf.mp4', title: 'A Experiência do Cliente', startTime: '1.0' }
+              { id: 'ln1gge9em1', title: 'Depoimento Estratégico' },
+              { id: '5znuistuim', title: 'A Experiência do Cliente' }
             ].map((video, i) => {
-              const [isPlaying, setIsPlaying] = useState(false);
-              const vRef = useRef<HTMLVideoElement>(null);
-
-              const handleVideoClick = () => {
-                if (vRef.current) {
-                  if (isPlaying) {
-                    vRef.current.pause();
-                  } else {
-                    vRef.current.play();
-                  }
-                  setIsPlaying(!isPlaying);
-                }
-              };
-
               return (
                 <div 
                   key={i} 
-                  className="group relative w-full max-w-[320px] aspect-[9/16] bg-neutral-900 rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl cursor-pointer"
-                  onClick={handleVideoClick}
+                  className="group relative w-full max-w-[320px] aspect-[9/16] bg-neutral-900 rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
                 >
-                  <video 
-                    ref={vRef}
-                    src={`${video.src}#t=${video.startTime}`} 
-                    className={`w-full h-full object-cover transition-opacity duration-500 ${isPlaying ? 'opacity-100' : 'opacity-60 group-hover:opacity-80'}`}
-                    playsInline
-                    preload="metadata"
-                  />
-                  
-                  {/* Play Button Overlay */}
-                  {!isPlaying && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
-                        <Play className="w-8 h-8 text-white fill-current ml-1" />
-                      </div>
-                    </div>
-                  )}
-
-                  <div className={`absolute bottom-8 left-8 right-8 text-left transition-opacity duration-300 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
-                    <p className="text-gold-light text-[10px] uppercase tracking-[0.3em] font-bold mb-2">Vídeo Feedback</p>
-                    <h4 className="text-xl font-serif">{video.title}</h4>
-                  </div>
+                  <iframe 
+                    src={`https://fast.wistia.net/embed/iframe/${video.id}?videoFoam=true`}
+                    title={video.title}
+                    allow="autoplay; fullscreen"
+                    frameBorder="0"
+                    scrolling="no"
+                    className="w-full h-full"
+                  ></iframe>
                 </div>
               );
             })}
@@ -608,47 +570,16 @@ export default function ConsultoriaOnline({ onBack, onSuccess }: ConsultoriaOnli
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border border-white/10 group cursor-pointer"
-              onClick={toggleMute}
+              className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border border-white/10"
             >
-              <video 
-                ref={videoRef}
-                src="/conheca.mp4" 
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              
-              {/* Custom Mute/Unmute Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div 
-                  initial={false}
-                  animate={{ 
-                    scale: isMuted ? 1 : 0.8,
-                    opacity: isMuted ? 1 : 0
-                  }}
-                  className="bg-black/40 backdrop-blur-md p-8 rounded-full border border-white/20 flex flex-col items-center gap-3 transition-all group-hover:bg-black/60"
-                >
-                  {isMuted ? (
-                    <>
-                      <VolumeX className="w-12 h-12 text-white" />
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Clique para ativar o som</span>
-                    </>
-                  ) : (
-                    <Volume2 className="w-12 h-12 text-white" />
-                  )}
-                </motion.div>
-              </div>
-
-              {/* Small indicator when unmuted */}
-              {!isMuted && (
-                <div className="absolute bottom-6 right-6 p-3 bg-black/40 backdrop-blur-md rounded-full border border-white/10">
-                  <Volume2 className="w-4 h-4 text-white" />
-                </div>
-              )}
+              <iframe 
+                src="https://fast.wistia.net/embed/iframe/57ynzjv8pr?videoFoam=true"
+                title="Conheça Daniel Henrique"
+                allow="autoplay; fullscreen"
+                frameBorder="0"
+                scrolling="no"
+                className="w-full h-full"
+              ></iframe>
             </motion.div>
           </div>
         </section>
